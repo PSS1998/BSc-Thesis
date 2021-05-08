@@ -13,7 +13,7 @@ import random
 from environment import TradingEnv
 
 tf.keras.backend.set_floatx('float64')
-# wandb.init(name='DuelingDoubleDQN', project="deep-rl-tf2")
+wandb.init(name='DuelingDoubleDQN', project="deep-rl-tf2")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--gamma', type=float, default=0.95)
