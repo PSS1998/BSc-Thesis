@@ -108,6 +108,7 @@ class Agent:
     
     def train(self, max_episodes=1000):
         for ep in range(max_episodes):
+            self.model.model = keras.models.load_model("model")
             done, total_reward = False, 0
             state = self.env.reset()
             while not done:
@@ -121,7 +122,8 @@ class Agent:
                 self.replay()                
             self.target_update()
             print('EP{} EpisodeReward={}'.format(ep, total_reward))
-            # wandb.log({'Reward': total_reward})
+            wandb.log({'Reward': total_reward})
+            self.model.model.save('model')
 
 
 def main():
