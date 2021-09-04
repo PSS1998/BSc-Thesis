@@ -16,7 +16,7 @@ for data_file in list_data:
 
     print(data_file)
   
-    df = pd.read_csv(DATA+data_file)
+    df = pd.read_csv(constants.DATA+data_file)
 
     # df['time'] = pd.to_datetime(df['time'])
     # df = df.set_index("time")
@@ -290,6 +290,6 @@ for data_file in list_data:
     # print(df.count())
 
     if noise_type==2:
-        df.to_csv(DATA+data_file[:-4]+'_signal2.csv')
+        df.to_csv(constants.DATA+data_file[:-4]+'_signal2.csv')
     else:
-        df.to_csv(DATA+data_file[:-4]+'_signal.csv')
+        df.to_csv(constants.DATA+data_file[:-4]+'_signal.csv')
