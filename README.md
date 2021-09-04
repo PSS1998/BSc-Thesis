@@ -1,11 +1,21 @@
 # BSc-Thesis
 Deep RL agent for trading using buy and sell signals as input
 
-# Prerequisite
-Before using codes in this repository you have to first install [TensorTrade](https://github.com/PSS1998/tensortrade), on your system.<br/>
+# Info
+This repository uses [TensorTrade](https://github.com/PSS1998/tensortrade) as the enviornment for training of RL agent.<br/>
 
 ## Usage
-First you need to configure your desired settings in config.py<br/>
-Then you have to download the data needed with executing download_data.py<br/>
-Then you have to prepare the data and add the input signals with noise by running data_prep.py<br/>
-After that You can run RL_Train.py to train and test your agent.<br/>
+In order to train and use a RL agent for the input signals, you have to do the following steps.<br/>
+You can modify each step depending on your needs.<br/>
+1. git clone https://github.com/PSS1998/BSc-Thesis.git <br/>
+2. cd BSc-Thesis <br/>
+3. git clone https://github.com/PSS1998/tensortrade.git <br/>
+4. cd tensortrade <br/>
+5. python -m pip install . <br/>
+6. cd .. <br/>
+7. python -m pip install -r requirements.txt <br/>
+8. mkdir data <br/>
+9. create an account in Finnhub website and add your API to config.py. also change any other config you need. <br/>
+10. python download_data.py <br/>
+11. python RL_Train.py <br/>
+
