@@ -15,7 +15,7 @@ You can modify each step depending on your needs.<br/>
 6. cd .. <br/>
 7. python -m pip install -r requirements.txt <br/>
 8. mkdir data <br/>
-9. create an account in Finnhub website and add your API to config.py. also change any other config you need. <br/>
+9. create an account in [Finnhub.io](https://finnhub.io/) and add your API to config.py. also change any other config you need. <br/>
 10. python download_data.py <br/>
 11. python RL_Train.py <br/>
 
