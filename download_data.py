@@ -52,7 +52,9 @@ class data_downloader_csv():
         ticker['date'] = ticker['date'].apply(lambda x: datetime.datetime.utcfromtimestamp(x).strftime("%Y/%m/%d %H:%M:%S"))
         ticker.insert(0, "time", ticker['date'])
         ticker = ticker.drop('date', axis=1)
-        ticker.to_csv(constants.DATA+ticker_name+":"+timeframe+'.csv', index = False)
+        name = constants.DATA+ticker_name+":"+timeframe+'.csv'
+        name = name.replace(":","_")
+        ticker.to_csv(name, index = False)
 
     def download_data(self, from_date=0):
         pair_list = config.PAIR_LIST
