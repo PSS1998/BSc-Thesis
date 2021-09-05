@@ -3,6 +3,9 @@ Deep RL agent for trading using buy and sell signals as input
 
 # Info
 This repository uses [TensorTrade](https://github.com/PSS1998/tensortrade) as the enviornment for training of RL agent.<br/>
+For more details on RL environment use [TensorTrade](https://github.com/PSS1998/tensortrade/tree/master/docs/source) documentation.<br/>
+For more details on building your RL model use [Stable Baselines3](https://stable-baselines3.readthedocs.io/en/master/) documentation.<br/>
+For more details on the API available for financial markets data through Finnhub read their [API documentation](https://finnhub.io/docs/api/introduction) which is implemented in this repository.<br/>
 
 ## Usage
 In order to train and use a RL agent for the input signals, you have to do the following steps.<br/>
